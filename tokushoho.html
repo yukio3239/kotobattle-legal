@@ -1,242 +1,371 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>特定商取引法に基づく表記 | ことバトル</title>
-<style>
-  :root {
-    color-scheme: light;
-    --bg: #FFF9F4;
-    --card: #ffffff;
-    --text: #2b2320;
-    --muted: #7a6f68;
-    --accent: #e8734a;
-    --border: #eee0d6;
-    --todo-bg: #fff2cc;
-    --todo-text: #8a6d00;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-    line-height: 1.85;
-  }
-  header {
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    padding: 20px 16px;
-  }
-  header .inner {
-    max-width: 760px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  header .brand {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--accent);
-    text-decoration: none;
-  }
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    margin-left: 16px;
-    font-size: 0.92rem;
-  }
-  nav a:hover, nav a.active { color: var(--accent); }
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 32px 16px 80px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px clamp(20px, 5vw, 48px);
-  }
-  h1 { font-size: 1.6rem; margin: 0 0 4px; }
-  h2 { font-size: 1.2rem; margin-top: 2.2em; border-left: 4px solid var(--accent); padding-left: 10px; }
-  h3 { font-size: 1.02rem; color: var(--accent); margin-top: 1.6em; }
-  p { margin: 0.7em 0; }
-  p.meta { color: var(--muted); font-size: 0.88rem; margin: 0.2em 0; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.92rem; }
-  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
-  th { background: #fdf3ec; }
-  ul, ol { padding-left: 1.4em; }
-  li { margin: 0.35em 0; }
-  blockquote {
-    margin: 1em 0;
-    padding: 10px 14px;
-    background: #fdf3ec;
-    border-left: 4px solid var(--accent);
-    border-radius: 4px;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-  a { color: var(--accent); }
-  code { background: #f4ede6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
-  .todo {
-    background: var(--todo-bg);
-    color: var(--todo-text);
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.82rem;
-    padding: 24px 16px 48px;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記 | ことバトル</title>
+  <style>
     :root {
-      color-scheme: dark;
-      --bg: #1c1815;
-      --card: #262019;
-      --text: #f2e9e0;
-      --muted: #a89a8e;
-      --accent: #ff8c5a;
-      --border: #3a3129;
-      --todo-bg: #4a3c14;
-      --todo-text: #ffd873;
+      color-scheme: light;
+      --bg: #FFF9F4;
+      --card: #ffffff;
+      --text: #2b2320;
+      --muted: #7a6f68;
+      --accent: #e8734a;
+      --border: #eee0d6;
+      --todo-bg: #fff2cc;
+      --todo-text: #8a6d00;
     }
-    th { background: #2f271d; }
-    blockquote { background: #2f271d; }
-    code { background: #332a22; }
-  }
-</style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.85;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 16px;
+    }
+
+    header .inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px clamp(20px, 5vw, 48px);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 4px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2.2em;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      color: var(--accent);
+      margin-top: 1.6em;
+    }
+
+    p {
+      margin: 0.7em 0;
+    }
+
+    p.meta {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin: 0.2em 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2em 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 0.92rem;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: #fdf3ec;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin: 0.35em 0;
+    }
+
+    blockquote {
+      margin: 1em 0;
+      padding: 10px 14px;
+      background: #fdf3ec;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    code {
+      background: #f4ede6;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .todo {
+      background: var(--todo-bg);
+      color: var(--todo-text);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding: 24px 16px 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #1c1815;
+        --card: #262019;
+        --text: #f2e9e0;
+        --muted: #a89a8e;
+        --accent: #ff8c5a;
+        --border: #3a3129;
+        --todo-bg: #4a3c14;
+        --todo-text: #ffd873;
+      }
+
+      th {
+        background: #2f271d;
+      }
+
+      blockquote {
+        background: #2f271d;
+      }
+
+      code {
+        background: #332a22;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="inner">
-    <a class="brand" href="./index.html">ことバトル</a>
-    <nav>
-      <a href="./index.html" class="">サポート</a>
-      <a href="./privacy-policy.html" class="">プライバシーポリシー</a>
-      <a href="./terms-of-service.html" class="">利用規約</a>
-      <a href="./tokushoho.html" class="active">特定商取引法に基づく表記</a>
-    </nav>
-  </div>
-</header>
-<main>
-  <div class="card">
-<h1>特定商取引法に基づく表記</h1>
+  <header>
+    <div class="inner">
+      <a class="brand" href="./index.html">ことバトル</a>
+      <nav>
+        <a href="./index.html" class="">サポート</a>
+        <a href="./privacy-policy.html" class="">プライバシーポリシー</a>
+        <a href="./terms-of-service.html" class="">利用規約</a>
+        <a href="./tokushoho.html" class="active">特定商取引法に基づく表記</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <h1>特定商取引法に基づく表記</h1>
 
-<p><strong>アプリ名</strong>: ことバトル</p>
-<p><strong>制定日</strong>: 2026年8月26日</p>
-<p><strong>最終更新日</strong>: 2026年8月26日</p>
+      <p><strong>アプリ名</strong>: ことバトル</p>
+      <p><strong>制定日</strong>: 2026年8月26日</p>
+      <p><strong>最終更新日</strong>: 2026年8月26日</p>
 
-<p>本表記は、特定商取引法第11条に基づき、本アプリ内で提供する有償のデジタルコンテンツ（広告除去機能）の販売に関して表示するものです。</p>
+      <p>本表記は、特定商取引法第11条に基づき、本アプリ内で提供する有償のデジタルコンテンツ（広告除去機能）の販売に関して表示するものです。</p>
 
-<hr>
+      <hr>
 
-<h2>販売事業者</h2>
+      <h2>販売事業者</h2>
 
-<table>
-<tr><th>項目</th><th>内容</th></tr>
-<tr><td>販売事業者</td><td><span class="todo">TODO: 個人事業のため、氏名（本名）を記入してください。屋号がある場合は屋号も併記できます </span></td></tr>
-<tr><td>運営責任者</td><td><span class="todo">TODO: 上記と同一の場合は「販売事業者に同じ」と記載してください </span></td></tr>
-<tr><td>所在地</td><td><span class="todo">TODO: 個人の現住所を記入してください。下記「所在地・電話番号の開示について」もご確認ください </span></td></tr>
-<tr><td>電話番号</td><td><span class="todo">TODO: 下記「所在地・電話番号の開示について」もご確認ください </span></td></tr>
-<tr><td>メールアドレス</td><td><span class="todo">TODO: 公開用の連絡先メールアドレスを記入してください </span></td></tr>
-</table>
+      <table>
+        <tr>
+          <th>項目</th>
+          <th>内容</th>
+        </tr>
+        <tr>
+          <td>販売事業者</td>
+          <td><span class="todo">TODO: 個人事業のため、氏名（本名）を記入してください。屋号がある場合は屋号も併記できます </span></td>
+        </tr>
+        <tr>
+          <td>運営責任者</td>
+          <td><span class="todo">TODO: 上記と同一の場合は「販売事業者に同じ」と記載してください </span></td>
+        </tr>
+        <tr>
+          <td>所在地</td>
+          <td><span class="todo">TODO: 個人の現住所を記入してください。下記「所在地・電話番号の開示について」もご確認ください </span></td>
+        </tr>
+        <tr>
+          <td>電話番号</td>
+          <td><span class="todo">TODO: 下記「所在地・電話番号の開示について」もご確認ください </span></td>
+        </tr>
+        <tr>
+          <td>メールアドレス</td>
+          <td><span class="todo">TODO: 公開用の連絡先メールアドレスを記入してください </span></td>
+        </tr>
+      </table>
 
-<h3>所在地・電話番号の開示について</h3>
+      <h3>所在地・電話番号の開示について</h3>
 
-<p>消費者庁の通達により、通信販売を行う<strong>個人事業者</strong>は、次のいずれかを満たす場合に限り、所在地・電話番号の常時公開に代えて「請求があれば遅滞なく開示する」旨を表示できます。</p>
+      <p>消費者庁の通達により、通信販売を行う<strong>個人事業者</strong>は、次のいずれかを満たす場合に限り、所在地・電話番号の常時公開に代えて「請求があれば遅滞なく開示する」旨を表示できます。</p>
 
-<ul>
-<li>請求を受けてから2日以内、かつ2回以上の連絡（電話・電子メール等）の往復により、所在地・電話番号を遅滞なく開示すること</li>
-</ul>
+      <ul>
+        <li>請求を受けてから2日以内、かつ2回以上の連絡（電話・電子メール等）の往復により、所在地・電話番号を遅滞なく開示すること</li>
+      </ul>
 
-<p>この方式による場合は、上表の該当欄に「請求があれば遅滞なく開示します」と記載し、開示請求の受付方法（例: 上記メールアドレス宛）を明記してください。特定の販売形態（訪問販売等）や取引の実態によっては、この省略が認められない場合があるため、最終的な要否は最新の消費者庁ガイドラインでご確認ください。</p>
+      <p>この方式による場合は、上表の該当欄に「請求があれば遅滞なく開示します」と記載し、開示請求の受付方法（例:
+        上記メールアドレス宛）を明記してください。特定の販売形態（訪問販売等）や取引の実態によっては、この省略が認められない場合があるため、最終的な要否は最新の消費者庁ガイドラインでご確認ください。</p>
 
-<hr>
+      <hr>
 
-<h2>販売価格</h2>
+      <h2>販売価格</h2>
 
-<p>広告除去機能（買い切り型・非消耗型アイテム）の価格は、App Store の商品ページに表示される金額（消費税込み）とします。当方サイトおよびアプリ内では別途の金額表示は行いません。</p>
+      <p>広告除去機能（買い切り型・非消耗型アイテム）の価格は、App Store の商品ページに表示される金額（消費税込み）とします。当方サイトおよびアプリ内では別途の金額表示は行いません。</p>
 
-<blockquote>現時点でアプリ内の購入導線（結果画面の「広告を消す」ボタン）に価格が表示されていません。App Store の審査上も、購入導線の近くに価格を明示することが求められます。ボタンにApp Store から取得した価格（例:「広告を消す（¥370）」）を表示するようアプリを更新することを推奨します。</blockquote>
+      <blockquote>現時点でアプリ内の購入導線（結果画面の「広告を消す」ボタン）に価格が表示されていません。App Store の審査上も、購入導線の近くに価格を明示することが求められます。ボタンにApp Store
+        から取得した価格（例:「広告を消す（¥370）」）を表示するようアプリを更新することを推奨します。</blockquote>
 
-<hr>
+      <hr>
 
-<h2>販売価格以外に必要な料金</h2>
+      <h2>販売価格以外に必要な料金</h2>
 
-<p>なし。ただし、本アプリのダウンロードおよび通信には、利用者が契約する通信事業者の通信料が別途かかります。</p>
+      <p>なし。ただし、本アプリのダウンロードおよび通信には、利用者が契約する通信事業者の通信料が別途かかります。</p>
 
-<hr>
+      <hr>
 
-<h2>代金の支払時期および方法</h2>
+      <h2>代金の支払時期および方法</h2>
 
-<table>
-<tr><th>項目</th><th>内容</th></tr>
-<tr><td>支払方法</td><td>Apple の提供する決済手段（App内課金）</td></tr>
-<tr><td>支払時期</td><td>購入操作の完了時に、利用者の Apple ID に紐づく支払方法へ即時課金</td></tr>
-</table>
+      <table>
+        <tr>
+          <th>項目</th>
+          <th>内容</th>
+        </tr>
+        <tr>
+          <td>支払方法</td>
+          <td>Apple の提供する決済手段（App内課金）</td>
+        </tr>
+        <tr>
+          <td>支払時期</td>
+          <td>購入操作の完了時に、利用者の Apple ID に紐づく支払方法へ即時課金</td>
+        </tr>
+      </table>
 
-<p>決済は Apple Inc. のシステムを通じて行われ、当方はクレジットカード番号等の決済情報を取得しません。</p>
+      <p>決済は Apple Inc. のシステムを通じて行われ、当方はクレジットカード番号等の決済情報を取得しません。</p>
 
-<hr>
+      <hr>
 
-<h2>商品の引き渡し時期</h2>
+      <h2>商品の引き渡し時期</h2>
 
-<p>決済完了後、直ちにアプリ内で広告除去が有効になります。</p>
+      <p>決済完了後、直ちにアプリ内で広告除去が有効になります。</p>
 
-<hr>
+      <hr>
 
-<h2>返品・キャンセルに関する特約</h2>
+      <h2>返品・キャンセルに関する特約</h2>
 
-<p>デジタルコンテンツの性質上、<strong>購入完了後の返品・返金・キャンセルには応じません</strong>。</p>
+      <p>デジタルコンテンツの性質上、<strong>購入完了後の返品・返金・キャンセルには応じません</strong>。</p>
 
-<p>Apple の定めるところにより返金を希望される場合は、Apple のサポート窓口（https://support.apple.com/ja-jp/HT204084 「iTunes Store と App Store での購入について払い戻しをリクエストする」）よりお手続きください。返金の可否は Apple の判断によります。</p>
+      <p>Apple の定めるところにより返金を希望される場合は、Apple のサポート窓口（https://support.apple.com/ja-jp/HT204084 「iTunes Store と App Store
+        での購入について払い戻しをリクエストする」）よりお手続きください。返金の可否は Apple の判断によります。</p>
 
-<p>同一の Apple ID による再購入を避けるため、機種変更・再インストール後は、アプリ内の「購入を復元」から購入内容を復元してください。</p>
+      <p>同一の Apple ID による再購入を避けるため、機種変更・再インストール後は、アプリ内の「購入を復元」から購入内容を復元してください。</p>
 
-<hr>
+      <hr>
 
-<h2>動作環境</h2>
+      <h2>動作環境</h2>
 
-<table>
-<tr><th>項目</th><th>内容</th></tr>
-<tr><td>対応OS</td><td>iOS（App Store の対応バージョン表示に準じます）</td></tr>
-<tr><td>通信環境</td><td>インターネット接続が必要です</td></tr>
-</table>
+      <table>
+        <tr>
+          <th>項目</th>
+          <th>内容</th>
+        </tr>
+        <tr>
+          <td>対応OS</td>
+          <td>iOS（App Store の対応バージョン表示に準じます）</td>
+        </tr>
+        <tr>
+          <td>通信環境</td>
+          <td>インターネット接続が必要です</td>
+        </tr>
+      </table>
 
-<hr>
+      <hr>
 
-<h2>お問い合わせ</h2>
+      <h2>お問い合わせ</h2>
 
-<p>本表記および商品に関するお問い合わせは、以下までお願いいたします。</p>
+      <p>本表記および商品に関するお問い合わせは、以下までお願いいたします。</p>
 
-<ul>
-<li>メールアドレス: <span class="todo">TODO: プライバシーポリシー・利用規約と同一のメールアドレスを記入してください </span></li>
-</ul>
+      <ul>
+        <li>メールアドレス: yukio.y.2125@icloud.com</li>
+      </ul>
 
-<hr>
+      <hr>
 
-<h2>関連文書</h2>
+      <h2>関連文書</h2>
 
-<ul>
-<li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
-<li><a href="./terms-of-service.html">利用規約</a></li>
-</ul>
+      <ul>
+        <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+        <li><a href="./terms-of-service.html">利用規約</a></li>
+      </ul>
 
 
-  </div>
-</main>
-<footer>
-  &copy; 2026 ことバトル
-</footer>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 ことバトル
+  </footer>
 </body>
+
 </html>
