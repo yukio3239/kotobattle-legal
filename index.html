@@ -1,176 +1,267 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>サポート | ことバトル</title>
-<style>
-  :root {
-    color-scheme: light;
-    --bg: #FFF9F4;
-    --card: #ffffff;
-    --text: #2b2320;
-    --muted: #7a6f68;
-    --accent: #e8734a;
-    --border: #eee0d6;
-    --todo-bg: #fff2cc;
-    --todo-text: #8a6d00;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
-    line-height: 1.85;
-  }
-  header {
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    padding: 20px 16px;
-  }
-  header .inner {
-    max-width: 760px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  header .brand {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--accent);
-    text-decoration: none;
-  }
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    margin-left: 16px;
-    font-size: 0.92rem;
-  }
-  nav a:hover, nav a.active { color: var(--accent); }
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 32px 16px 80px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px clamp(20px, 5vw, 48px);
-  }
-  h1 { font-size: 1.6rem; margin: 0 0 4px; }
-  h2 { font-size: 1.2rem; margin-top: 2.2em; border-left: 4px solid var(--accent); padding-left: 10px; }
-  h3 { font-size: 1.02rem; color: var(--accent); margin-top: 1.6em; }
-  p { margin: 0.7em 0; }
-  p.meta { color: var(--muted); font-size: 0.88rem; margin: 0.2em 0; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.92rem; }
-  th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
-  th { background: #fdf3ec; }
-  ul, ol { padding-left: 1.4em; }
-  li { margin: 0.35em 0; }
-  blockquote {
-    margin: 1em 0;
-    padding: 10px 14px;
-    background: #fdf3ec;
-    border-left: 4px solid var(--accent);
-    border-radius: 4px;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-  a { color: var(--accent); }
-  code { background: #f4ede6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
-  .todo {
-    background: var(--todo-bg);
-    color: var(--todo-text);
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-size: 0.85em;
-    font-weight: 600;
-  }
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.82rem;
-    padding: 24px 16px 48px;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サポート | ことバトル</title>
+  <style>
     :root {
-      color-scheme: dark;
-      --bg: #1c1815;
-      --card: #262019;
-      --text: #f2e9e0;
-      --muted: #a89a8e;
-      --accent: #ff8c5a;
-      --border: #3a3129;
-      --todo-bg: #4a3c14;
-      --todo-text: #ffd873;
+      color-scheme: light;
+      --bg: #FFF9F4;
+      --card: #ffffff;
+      --text: #2b2320;
+      --muted: #7a6f68;
+      --accent: #e8734a;
+      --border: #eee0d6;
+      --todo-bg: #fff2cc;
+      --todo-text: #8a6d00;
     }
-    th { background: #2f271d; }
-    blockquote { background: #2f271d; }
-    code { background: #332a22; }
-  }
-</style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+      line-height: 1.85;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 16px;
+    }
+
+    header .inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.92rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px clamp(20px, 5vw, 48px);
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 4px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2.2em;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      color: var(--accent);
+      margin-top: 1.6em;
+    }
+
+    p {
+      margin: 0.7em 0;
+    }
+
+    p.meta {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin: 0.2em 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2em 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 0.92rem;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: #fdf3ec;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.4em;
+    }
+
+    li {
+      margin: 0.35em 0;
+    }
+
+    blockquote {
+      margin: 1em 0;
+      padding: 10px 14px;
+      background: #fdf3ec;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    code {
+      background: #f4ede6;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .todo {
+      background: var(--todo-bg);
+      color: var(--todo-text);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding: 24px 16px 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #1c1815;
+        --card: #262019;
+        --text: #f2e9e0;
+        --muted: #a89a8e;
+        --accent: #ff8c5a;
+        --border: #3a3129;
+        --todo-bg: #4a3c14;
+        --todo-text: #ffd873;
+      }
+
+      th {
+        background: #2f271d;
+      }
+
+      blockquote {
+        background: #2f271d;
+      }
+
+      code {
+        background: #332a22;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="inner">
-    <a class="brand" href="./index.html">ことバトル</a>
-    <nav>
-      <a href="./index.html" class="active">サポート</a>
-      <a href="./privacy-policy.html" class="">プライバシーポリシー</a>
-      <a href="./terms-of-service.html" class="">利用規約</a>
-      <a href="./tokushoho.html" class="">特定商取引法に基づく表記</a>
-    </nav>
-  </div>
-</header>
-<main>
-  <div class="card">
-<h1>サポート</h1>
-<p class="meta">アプリ名: ことバトル ／ 最終更新日: 2026年8月26日</p>
+  <header>
+    <div class="inner">
+      <a class="brand" href="./index.html">ことバトル</a>
+      <nav>
+        <a href="./index.html" class="active">サポート</a>
+        <a href="./privacy-policy.html" class="">プライバシーポリシー</a>
+        <a href="./terms-of-service.html" class="">利用規約</a>
+        <a href="./tokushoho.html" class="">特定商取引法に基づく表記</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="card">
+      <h1>サポート</h1>
+      <p class="meta">アプリ名: ことバトル ／ 最終更新日: 2026年8月26日</p>
 
-<p>「ことバトル」をご利用いただきありがとうございます。このページは、アプリに関するお問い合わせ窓口、および関連する法務文書の掲載ページです。</p>
+      <p>「ことバトル」をご利用いただきありがとうございます。このページは、アプリに関するお問い合わせ窓口、および関連する法務文書の掲載ページです。</p>
 
-<hr>
+      <hr>
 
-<h2>お問い合わせ</h2>
-<p>アプリの不具合、ご要望、単語判定に関するお問い合わせ、その他ご不明点は、以下の連絡先までご連絡ください。</p>
-<p><span class="todo">TODO: 公開用メールアドレスを記入してください</span></p>
+      <h2>お問い合わせ</h2>
+      <p>アプリの不具合、ご要望、単語判定に関するお問い合わせ、その他ご不明点は、以下の連絡先までご連絡ください。</p>
+      <p>yukio.y.2125@icloud.com</p>
 
-<h2>よくあるお問い合わせ</h2>
+      <h2>よくあるお問い合わせ</h2>
 
-<h3>広告が表示されない</h3>
-<p>電波状況や広告在庫の都合により、広告が表示されないことがあります。しばらく時間をおいて再度お試しください。</p>
+      <h3>広告が表示されない</h3>
+      <p>電波状況や広告在庫の都合により、広告が表示されないことがあります。しばらく時間をおいて再度お試しください。</p>
 
-<h3>スコアが正しく登録されない</h3>
-<p>通信状態が不安定な場合、スコアの登録に失敗することがあります。ネットワーク接続をご確認のうえ、再度プレイしてください。</p>
+      <h3>スコアが正しく登録されない</h3>
+      <p>通信状態が不安定な場合、スコアの登録に失敗することがあります。ネットワーク接続をご確認のうえ、再度プレイしてください。</p>
 
-<h3>単語が正しく判定されない</h3>
-<p>本アプリは複数の判定方式を組み合わせていますが、実在する単語が認識されない場合や、その逆の場合があります。判定に納得がいかない単語は、アプリ内の申請機能から辞書への登録を申請できます。</p>
+      <h3>単語が正しく判定されない</h3>
+      <p>本アプリは複数の判定方式を組み合わせていますが、実在する単語が認識されない場合や、その逆の場合があります。判定に納得がいかない単語は、アプリ内の申請機能から辞書への登録を申請できます。</p>
 
-<h3>広告除去を購入したのに反映されない</h3>
-<p>アプリ内の結果画面から「購入を復元」をお試しください。それでも解決しない場合は、購入時の Apple ID とご使用の Apple ID が一致しているかご確認のうえ、上記までご連絡ください。</p>
+      <h3>広告除去を購入したのに反映されない</h3>
+      <p>アプリ内の結果画面から「購入を復元」をお試しください。それでも解決しない場合は、購入時の Apple ID とご使用の Apple ID が一致しているかご確認のうえ、上記までご連絡ください。</p>
 
-<h3>返金してほしい</h3>
-<p>購入の返金は Apple が窓口となります。<a href="https://support.apple.com/ja-jp/HT204084" target="_blank" rel="noopener">Apple公式サポートページ（払い戻しのリクエスト）</a>よりお手続きください。</p>
+      <h3>返金してほしい</h3>
+      <p>購入の返金は Apple が窓口となります。<a href="https://support.apple.com/ja-jp/HT204084" target="_blank"
+          rel="noopener">Apple公式サポートページ（払い戻しのリクエスト）</a>よりお手続きください。</p>
 
-<hr>
+      <hr>
 
-<h2>関連文書</h2>
-<ul>
-<li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
-<li><a href="./terms-of-service.html">利用規約</a></li>
-<li><a href="./tokushoho.html">特定商取引法に基づく表記</a></li>
-</ul>
+      <h2>関連文書</h2>
+      <ul>
+        <li><a href="./privacy-policy.html">プライバシーポリシー</a></li>
+        <li><a href="./terms-of-service.html">利用規約</a></li>
+        <li><a href="./tokushoho.html">特定商取引法に基づく表記</a></li>
+      </ul>
 
-  </div>
-</main>
-<footer>
-  &copy; 2026 ことバトル
-</footer>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 ことバトル
+  </footer>
 </body>
+
 </html>
